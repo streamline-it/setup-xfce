@@ -1,0 +1,8 @@
+---
+- name: ensure services are started
+  tags: displayenv
+  loop:
+    "{{ setup_xfce_svcs }}"
+  ansible.builtin.service:
+    name: "{{ item }}"
+    state: started

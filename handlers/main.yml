@@ -1,0 +1,9 @@
+---
+# handlers file for setup-xfce
+- name: FreeBSD restart service
+  tags: displayenv
+  loop:
+    "{{ setup_xfce_svcs }}"
+  ansible.builtin.service:
+    name: "{{ item }}"
+    state: restarted
