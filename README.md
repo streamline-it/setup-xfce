@@ -17,7 +17,8 @@ Role Variables
 setup_xfce_gui_users:
   - username:
     gecos:
----
+
+# Contents of FreeBSD file under vars
 setup_xfce_pkgs:
   - lightdm
   - lightdm-gtk-greeter
@@ -38,6 +39,9 @@ setup_xfce_pixbuf_update_path: /usr/local/bin/gdk-pixbuf-query-loaders
 
 #command to update mime database
 setup_xfce_mime_db_path: /usr/local/bin/update-mime-database
+
+#location of mime database
+setup_xfce_mime_data_path: /usr/local/share/mime
 
 #location of mime database
 setup_xfce_mime_data_path: /usr/local/share/mime
