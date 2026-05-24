@@ -54,15 +54,20 @@ None
 Example Playbook
 ----------------
 
-    - hosts: servers
-      vars:
+- name: test setup-xfce role
+  hosts: node8.freebsd13.example.com
+  become: true
 
-        xfce_gui_user:
-          - username: rich
-            gecos: "Rich"
+  vars:
 
-      roles:
-         - name: setup-xfce
+    setup_xfce_gui_users:
+      - username: rich
+        gecos: Rich
+
+  roles:
+
+    - name: setup-xfce
+
 
 License
 -------
